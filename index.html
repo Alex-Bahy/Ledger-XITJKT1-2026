@@ -286,7 +286,7 @@ tr:last-child td{border-bottom:none;}
 </main>
 
 <!-- FLOATING BACK BUTTON -->
-<a href="https://alex-bahy.github.io/Portal-Kelas-XITJKT1-2026/" class="fab-back" title="Kembali ke Portal Kelas XI ULP">
+<a href="https://alex-bahy.github.io/Portal-Kelas-XITJKT1-2026/" class="fab-back" title="Kembali ke Portal Kelas XI TJKT">
   <span class="fab-icon">←</span>
   <span class="fab-text">Kembali ke<br><small>PORTAL KELAS</small></span>
 </a>
@@ -476,7 +476,7 @@ function renderLedger() {
 
   const tableHtml = `<div class="table-outer">
     <div class="table-toolbar">
-      <div class="table-toolbar-title">📊 Ledger Nilai — XIULP · Semester Genap 2025/2026</div>
+      <div class="table-toolbar-title">📊 Ledger Nilai — XITJKT1 · Semester Genap 2025/2026</div>
       <div class="legend">
         <span><span class="legend-dot" style="background:var(--sky)"></span>Umum</span>
         <span><span class="legend-dot" style="background:var(--teal)"></span>Kejuruan</span>
@@ -588,7 +588,7 @@ function downloadExcel() {
   const headers=['No','NIS','Nama Siswa',...mapel,'Jumlah','Rata-rata','Peringkat'];
   const data1=[
     ['LEDGER NILAI SEMESTER GENAP TAHUN PELAJARAN 2025/2026'],
-    ['Kelas XI Usaha Layanan Pariwisata (XI ULP  )'],
+    ['Kelas XI Usaha Layanan Pariwisata (XI TJKT1  )'],
     [],
     headers
   ];
@@ -606,7 +606,7 @@ function downloadExcel() {
   const ranked=[...siswa].filter(s=>s.rata!==null).sort((a,b)=>b.rata-a.rata);
   const data2=[
     ['REKAP PERINGKAT — SEMESTER GENAP 2025/2026'],
-    ['Kelas XIULP '],
+    ['Kelas XITJKT1 '],
     [],
     ['Peringkat','No','NIS','Nama Siswa','Rata-rata','Nilai Terisi']
   ];
@@ -617,7 +617,7 @@ function downloadExcel() {
   ws2['!cols']=[{wch:10},{wch:6},{wch:12},{wch:32},{wch:12},{wch:14}];
   XLSX.utils.book_append_sheet(wb,ws2,'Rekap Peringkat');
 
-  XLSX.writeFile(wb,'Ledger_Nilai_XULP  _Genap_2025-2026.xlsx');
+  XLSX.writeFile(wb,'Ledger_Nilai_XTJKT1  _Genap_2025-2026.xlsx');
 }
 
 // ── DOWNLOAD PDF ─────────────────────────────────────────────
